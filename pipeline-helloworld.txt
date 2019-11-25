@@ -1,3 +1,5 @@
+--> Hello World
+
 pipeline{
     agent any
     stages{
@@ -8,3 +10,75 @@ pipeline{
         }
     }
 }
+
+----> Agent none 
+
+pipeline {
+    agent none
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building my first Jenkins build pipeline......'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing my first Jenkins Test pipeline......'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying my first Jenkins Deploy pipeline......'
+            }
+        }
+    }
+}
+
+----> Agent Slave
+pipeline {
+    agent {
+           label "Slave"
+   }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building my first Jenkins build pipeline......'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing my first Jenkins Test pipeline......'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying my first Jenkins Deploy pipeline......'
+            }
+        }
+    }
+}
+
+
+
+----> Agent Slave and customWorkspace
+pipeline {
+    agent {
+        node {
+           label "Slave"
+          customWorkspace "/var/lib/jenkins/customspace"
+      }
+   }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building my first Jenkins build pipeline......'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing my first Jenkins Test pipeline......'
+            }
+        }
