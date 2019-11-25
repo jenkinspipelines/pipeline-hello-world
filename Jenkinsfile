@@ -2,8 +2,10 @@ pipeline {
     //agent any
     //agent none
     agent {
-        label "Slave"
-        customeWorkspace "/var/lib/jenkins/customspace"
+        node {
+           label "Slave"
+           customeWorkspace "/var/lib/jenkins/customspace"
+	}
     }
 
     stages {
