@@ -3,6 +3,7 @@ pipeline {
     //agent none
     agent {
         label "Slave"
+        customeWorkspace "/var/lib/jenkins/customspace"
     }
 
     stages {
