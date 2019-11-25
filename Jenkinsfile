@@ -4,7 +4,7 @@ pipeline {
     agent {
         node {
            label "Slave"
-           customeWorkspace "/var/lib/jenkins/customspace"
+           customWorkspace "/var/lib/jenkins/customspace"
 	}
     }
 
