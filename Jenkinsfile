@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing my first Jenkins Test pipeline.......'
+                echo 'Testing my first Jenkins Test pipeline......'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying my first Jenkins Deploy pipeline.......'
+                echo 'Deploying my first Jenkins Deploy pipeline......'
             }
         }
     }
